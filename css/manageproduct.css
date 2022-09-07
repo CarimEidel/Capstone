@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto&display=swap");
+
+/* GLOBAL STYLES */
+:root {
+  --font-color-dark: #603913;
+  --font-color-light: #fdbd32;
+  --bg-light: #fffaed;
+}
+
+/* Font Families
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    font-weight: 800;
+    color: var(--font-color-dark);
+  }
+  
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: var(--font-color-dark);
+}
+
+i {
+  cursor: pointer;
+}
+
+p {
+  font-size: 16px;
+  margin: 15px 0 20px 0;
+  letter-spacing: 1.1px;
+  font-family: "Roboto", sans-serif;
+}
+
+span {
+  font-size: 12px;
+}
+
+.section-padding1 {
+  padding: 40px 130px;
+}
+
+body {
+  display:block;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-light, white);
+}
+
+/* HEADER SECTION*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 130px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-light, white);
+  }
+  
+  #header a {
+    text-decoration: none;
+    color: var(--font-color-dark, brown);
+  }
+  
+  .logo {
+    width: auto;
+    height: 80px;
+  }
+  
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #close {
+    display: none;
+  }
+  
+  #navbar li {
+    list-style: none;
+    padding: 0 15px;
+  }
+  
+  #navbar li a {
+    transition: 0.2s ease-in;
+    font-weight: 600;
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.focus {
+    color: var(--font-color-light, yellow);
+    border-bottom: solid 3px var(--font-color-light, yellow);
+    padding-bottom: 2px;
+  }
+  
+  #mobile {
+    display: none;
+    align-items: center;
+  }
+  
+/*---SIDE BAR----*/
+.wrapper{
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.sidebar{
+    width: 300px;
+    background:#ffb700;
+    color:#603913;
+    min-height:calc(100vh);
+    padding:10px;
+}
+
+.sidebar a{
+  display: block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a.active{
+  background:#ffffff;
+  color:#603913;
+  padding: 10px;
+}
+
+.sidebar ul{
+    padding-left: 0 !important;
+}
+.sidebar .nav-bar li{
+    list-style: none;
+    
+    padding: 10px;
+}
+
+.sidebar .nav-bar li a{
+    color:#603913;
+    text-decoration: inherit;
+    display: block;
+}
+
+.sidebar .nav-bar li:hover{
+    background: #fff;
+    color:#603913;
+}
+
+/*---MANAGE PRODUCT---*/
+.product-display{
+  width: 100%;
+}
+table{
+  text-align: center;
+}
+
+thead{
+  background: var(--bg-color);
+}
+
+td{
+  padding:1rem;
+  font-size: 1rem;
+}
+.bg-blue{
+    background: linear-gradient(to right, #48acf9, blue);
+  }
+
+.search-box {
+  position: relative;
+  top: 0;
+  right: 0;
+  transform: translate(-50%,-50%);
+  display: inline;
+  justify-content: right;
+  align-items: right;
+}
+
+.search-box input{
+  background-color: rgb(48,168,220);
+  border: none;
+  outline: none;
+  width: 0;
+  padding: 0; 
+  opacity: 0;
+  border-radius: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  transition: all 1s;
+}
+
+.search-box input::placeholder {
+  color: rgba(255,255,255,.5);
+  font-weight: 400;
+}
+
+.search-box i {
+  background-color: rgb(48,168,220);
+  width: 40px;
+  height: 40px;
+  padding: 9px 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.search-box:hover input{
+  width: 240px;
+  opacity: 1;
+  padding: 10px 20px;
+}
+
+.search-box:hover i{
+  color: #fff;
+}
+
+.search-box-user:hover i{
+  color: #fff;
+}
+
+.product-display .table .btn:first-child{
+   background: var(--black);
+}
+.product-display .table .btn:last-child{
+   background: var(--black);
+ }
+ .product-display .table .btn:first-child:hover{
+    background: seagreen;
+ }
+ .product-display .table .btn:last-child:hover{
+    background: crimson;
+ }
+
+/*---FOOTER SECTION----*/
+#footer {
+    padding: 40px 130px 20px;
+    text-align: center;
+    background-color: var(--font-color-dark);
+    color: var(--bg-light);
+}
+  
+  #footer p:hover {
+    color: var(--font-color-light);
+}
+
+@media (max-width:991px){
+
+  html{
+    font-size: 55%;
+  }
+  .product-display table{
+    width: 80rem;
+  }
+}
+@media (max-width:768px){
+
+    html{
+      font-size: 55%;
+    }
+    .product-display table{
+      width: 80rem;
+    }
+  }
+
+@media (max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+  .product-display table{
+    width: 50rem;
+  }
+}

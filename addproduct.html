@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream ni Denver</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image" href="images/logo.png">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="addproduct.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#"><img class="logo " src="images/logo.png"> </a>
+      <nav >
+        <ul id="navbar">
+        <li><a class="focus" href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Review</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li class="icon">
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </li>
+        <li  class="icon">
+          <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+        </li>
+        <li  class="icon">
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li>
+            <a href="#"><i id="close" class="fa-solid fa-xmark"></i></a>
+        </li>
+    </ul>
+
+
+    <div id="mobile">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-cart-plus"></i>
+      <i class="fa-solid fa-user"></i>
+      <i id="bar" class="fa-solid fa-bars"></i>
+    </div>
+      </nav>
+    </header>
+
+  <!--Add Product Form-->
+  <form action>
+    <div class="form">
+      <fieldset>
+        <legend>Add Product</legend>
+        <input type="text" id="product-name"  placeholder="Product Name *" required="">
+        <textarea id="des" placeholder="Product Description *" cols="30" rows="10" required=""></textarea>
+          
+          <!-- Category-->
+        <div class="container">
+
+          <div class="select-box">
+            <div class="options-container acive">
+
+              <div class="option">
+                <input type="radio" class="radio" id="dairy" name="category"/>
+                <label for="ingredients">Dairy</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="ice Cream" name="category"/>
+                <label for="ingredients">Ice Cream</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="tools" name="category"/>
+                <label for="ingredients">Tools</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="sugar" name="category"/>
+                <label for="ingredients">Sugar</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="bake" name="category"/>
+                <label for="ingredients">Baking Ingredient</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="ice-ingredient" name="category"/>
+                <label for="ingredients">Ice Cream Ingredient</label>
+              </div>
+
+            </div>
+            <div class="selected">
+              Select Category 
+            </div>
+          </div>
+        </div>
+
+          <!-- Product Info-->
+          <div class="product-info">
+              <div class="product-image"><p class="text">Product Image</p></div>
+              <div class="upload-image-sec">
+                <!-- Upload Inputs-->
+                <p class="text"><img src="images/camera.png" alt=""> Add Image</p>
+                <div class="upload-catalouge">
+                  <input type="file" class="fileupload" id="file-upload-btn" multiple hidden>
+                  <label for="file-upload-btn" class="upload-image"></label> 
+                </div>
+              </div>
+
+              <div class="variations">
+                  <legend>Variations</legend>
+                <div class="select-flavor">
+                  <p class="text"> Flavor Available</p>
+                  <div class="flavors">
+                    <input type="checkbox" class="flavor-checkbox" id="v" value="vanilla">
+                    <input type="checkbox" class="flavor-checkbox" id="c" value="choco">
+                    <input type="checkbox" class="flavor-checkbox" id="st" value="strawberry">
+                  </div>
+                </div>
+                <div class="select-sizes">
+                  <p class="text"> Sizes Available</p>
+                  <div class="sizes">
+                    <input type="checkbox" class="size-checkbox" id="s" value="s">
+                    <input type="checkbox" class="size-checkbox" id="m" value="m">
+                    <input type="checkbox" class="size-checkbox" id="l" value="l">
+                    <input type="checkbox" class="size-checkbox" id="xl" value="xl">
+                  </div>
+                </div>
+             
+              </div>
+          </div> 
+          
+          <div class="product-specs">
+            <input type="number" id="price" placeholder="price">
+            <input type="text" id="pack-type" placeholder="Pack Type">
+            <input type="text" id="ice-type" placeholder="Ice cream type">
+            <input type="number" id="shell-life" placeholder="Shell Life (in Months)">
+            <input type="number" id="weight" placeholder="Weight (in Grams)">
+            <input type="number" id="stocks" min="5" placeholder="Item in Stocks (Minimum of 5)">
+            <input type="number" id="pack-size" placeholder="Pack Size">
+            <input type="number" id="ship-from" placeholder="Ship From">
+          </div>
+
+          <input type="checkbox" class="checkbox" id="take" checked>
+          <label for="take">Denver will take 15% of your sale</label>
+
+          <div class="buttons">
+            <button class="btn" id="add-btn"> add product</button>
+            <button class="btn" id="save-btn"> save draft</button>
+          </div>
+      </fieldset>
+    </div>
+  </form>
+   <script src="addproduct.js"></script>
+  
+</body>
+<footer id="footer">
+        <p>ⓒ Copyright Ice Cream. All rights Reserved</p>
+</footer>

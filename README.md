@@ -1,1 +1,2 @@
-# Capstone
+# IceCreamNiDenver
+Responsive website example
